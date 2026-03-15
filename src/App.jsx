@@ -37,6 +37,7 @@ const Header = () => {
             {isMenuOpen ? '✕' : '☰'}
           </button>
           <nav className={`main-nav ${isMenuOpen ? 'mobile-open' : ''}`}>
+            <button className="mobile-close-btn" onClick={() => setIsMenuOpen(false)}>✕</button>
             <a href="#courses" onClick={() => setIsMenuOpen(false)}>Courses</a>
             <a href="#test-series" onClick={() => setIsMenuOpen(false)}>Test Series</a>
             <a href="#free-resources" onClick={() => setIsMenuOpen(false)}>Free Resources</a>
