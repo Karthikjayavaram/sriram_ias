@@ -59,7 +59,8 @@ span.highlight {
   font-weight: 800;
   text-align: center;
   margin-bottom: 1rem;
-  color: #0f172a; /* Consistent dark color */
+  color: #0f172a;
+  /* Consistent dark color */
 }
 
 
@@ -128,9 +129,20 @@ button {
   margin: 0 10px;
 }
 
+.logo-img-wrapper {
+  background: white;
+  padding: 0;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
 .logo-img {
-  height: 40px;
-  filter: brightness(0) invert(1);
+  height: 42px;
+  display: block;
+  object-fit: contain;
 }
 
 .header-right {
@@ -375,14 +387,16 @@ button {
 
 .quotes-slider-container {
   overflow: hidden;
-  padding: 2rem 0 4rem 0; /* extra bottom padding for shadow */
+  padding: 2rem 0 4rem 0;
+  /* extra bottom padding for shadow */
 }
 
 .quotes-slider-track {
   display: flex;
   gap: 2rem;
   width: max-content;
-  padding: 0 2rem; /* padding inside track */
+  padding: 0 2rem;
+  /* padding inside track */
   animation: scrollQuotes 30s linear infinite;
 }
 
@@ -391,8 +405,13 @@ button {
 }
 
 @keyframes scrollQuotes {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .quote-card {
@@ -451,7 +470,8 @@ button {
 .quote-featured {
   background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   color: white;
-  min-width: 450px; /* Slightly wider */
+  min-width: 450px;
+  /* Slightly wider */
 }
 
 .quote-featured .quote-text {
@@ -467,7 +487,7 @@ button {
 }
 
 .quote-featured .quote-icon {
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 
@@ -507,7 +527,8 @@ button {
 .tabs-container-new {
   display: flex;
   justify-content: space-between;
-  background: #e0f2fe; /* Light blue full-width container */
+  background: #e0f2fe;
+  /* Light blue full-width container */
   padding: 0;
   border-radius: 50px;
   overflow-x: auto;
@@ -896,8 +917,10 @@ button {
 /* Stack: bg SVG + profile centred on top of it */
 .topper-stack {
   position: relative;
-  width: 240px;      /* matches SVG visual width */
-  height: 240px;     /* matches SVG visual height */
+  width: 240px;
+  /* matches SVG visual width */
+  height: 240px;
+  /* matches SVG visual height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -917,14 +940,15 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -48%);  /* shift slightly down from original -58% */
+  transform: translate(-50%, -48%);
+  /* shift slightly down from original -58% */
   width: 95px;
   height: 95px;
   border-radius: 50%;
   object-fit: cover;
   z-index: 2;
   border: 4px solid white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -953,7 +977,7 @@ button {
   font-weight: 900;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .topper-course-new {
@@ -966,29 +990,32 @@ button {
 }
 
 /* Story Animations */
-.animate-number * { transition: all 1s ease-out; }
+.animate-number * {
+  transition: all 1s ease-out;
+}
+
 /* Reveal Animations */
 .reveal-up {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform, opacity;
 }
 
 .reveal-left {
   opacity: 0;
   transform: translateX(-40px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform, opacity;
 }
 
 .reveal-right {
   opacity: 0;
   transform: translateX(40px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform, opacity;
 }
 
@@ -998,10 +1025,21 @@ button {
 }
 
 /* Staggered Delay Utilities */
-.delay-100 { transition-delay: 0.1s; }
-.delay-200 { transition-delay: 0.2s; }
-.delay-300 { transition-delay: 0.3s; }
-.delay-500 { transition-delay: 0.5s; }
+.delay-100 {
+  transition-delay: 0.1s;
+}
+
+.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+.delay-500 {
+  transition-delay: 0.5s;
+}
 
 
 /* Access Free Courses Blocks */
@@ -1060,7 +1098,8 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
-  padding: 0 4rem; /* Horizontal space inside the card */
+  padding: 0 4rem;
+  /* Horizontal space inside the card */
 }
 
 .block-text-side {
@@ -1141,10 +1180,12 @@ button {
     padding: 0 2rem;
     text-align: center;
   }
+
   .block-image-side {
     width: 100%;
     margin-top: 2rem;
   }
+
   .free-course-block {
     padding: 3rem 0;
   }
@@ -1160,7 +1201,7 @@ button {
 .app-section-new {
   position: relative;
   background-color: #ffffff;
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
     radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 40%);
   padding: 120px 0;
@@ -1279,7 +1320,7 @@ button {
   cursor: pointer;
   border-radius: 10px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
 .store-badge:hover {
@@ -1309,11 +1350,13 @@ button {
   height: 200px;
   animation-delay: 0s;
 }
+
 .app-ring-2 {
   width: 310px;
   height: 310px;
   animation-delay: 0.5s;
 }
+
 .app-ring-3 {
   width: 420px;
   height: 420px;
@@ -1321,15 +1364,27 @@ button {
 }
 
 @keyframes ring-pulse {
-  0%   { opacity: 0.6; transform: scale(0.95); }
-  50%  { opacity: 0.15; transform: scale(1.05); }
-  100% { opacity: 0.6; transform: scale(0.95); }
+  0% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 0.15;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
 }
 
 
 .phone-mockup-wrapper {
   position: relative;
-  width: 380px; /* Scaling up further for Figma look */
+  width: 380px;
+  /* Scaling up further for Figma look */
   z-index: 2;
   filter: drop-shadow(0 40px 80px rgba(56, 189, 248, 0.15));
 }
@@ -1341,9 +1396,17 @@ button {
 }
 
 @keyframes float {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-16px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-16px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .phone-m {
@@ -1971,7 +2034,8 @@ button {
 
   .mobile-menu-btn {
     display: block;
-    color: white; /* Changed from text-main to white for visibility on dark hero */
+    color: white;
+    /* Changed from text-main to white for visibility on dark hero */
     font-size: 1.5rem;
     padding: 5px;
   }
@@ -1992,9 +2056,11 @@ button {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px; /* Side drawer style instead of full width top-down */
+    width: 280px;
+    /* Side drawer style instead of full width top-down */
     height: 100vh;
-    background: #0f172a; /* Dark background for premium feel */
+    background: #0f172a;
+    /* Dark background for premium feel */
     flex-direction: column;
     padding: 80px 2rem 2rem;
     gap: 1.5rem;
@@ -2157,7 +2223,8 @@ button {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  min-height: 42px; /* Stable height */
+  min-height: 42px;
+  /* Stable height */
 }
 
 .icon-wrapper {
@@ -2199,7 +2266,8 @@ button {
   font-size: 1.4rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  min-width: 80px; /* Stabilizes width during incrementing */
+  min-width: 80px;
+  /* Stabilizes width during incrementing */
   display: inline-block;
 }
 
@@ -2406,7 +2474,8 @@ button {
     flex-direction: column;
     text-align: center;
     gap: 3rem;
-    padding: 0 2rem; /* Adjusted for mobile */
+    padding: 0 2rem;
+    /* Adjusted for mobile */
   }
 
   .block-text-side {
@@ -2454,7 +2523,8 @@ button {
   }
 
   .stat-card-new {
-    min-width: 160px; /* Slightly wider for stability */
+    min-width: 160px;
+    /* Slightly wider for stability */
     flex: 1 1 140px;
   }
 

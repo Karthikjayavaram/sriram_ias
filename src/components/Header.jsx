@@ -13,7 +13,7 @@ const Header = () => {
           </div>
           <div className="header-divider"></div>
           <div className="logo-img-wrapper">
-            <img src="https://www.sriramsias.com/images/logo.png" alt="Sriram's IAS" className="logo-img" />
+            <img src="/assets/logo.svg" alt="Sriram's IAS" className="logo-img" />
           </div>
         </div>
 
