@@ -1,0 +1,40 @@
+@media (max-width: 1024px) {
+  .toppers-track-visual {
+    gap: 2rem;
+  }
+  
+  .topper-card-visual {
+    width: 250px;
+  }
+  
+  .topper-wreath-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .topper-inner-img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topper-card-visual {
+    width: 220px;
+    padding: 2rem 0.75rem;
+  }
+
+  .toppers-title-visual {
+    font-size: 2rem;
+  }
+
+  .toppers-subtitle-visual {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topper-card-visual {
+    width: 190px;
+  }
+}

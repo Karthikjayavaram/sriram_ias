@@ -7,8 +7,8 @@ const ExploreCourses = () => {
   const tabs = ['GS Foundation', 'Mentorship', 'Optional Foundation', 'Test Series', 'Others'];
 
   const allCourses = [
-    { title: "1 Year General Studies Foundation Course", category: "GS Foundation", desc: "Join our GS Foundation Course now and start preparing to your career from now in SRI RAM ias to get better Future.", price: "Rs. 50,000 /-", img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1471&auto=format&fit=crop" },
-    { title: "2 Year General Studies Foundation Course", category: "GS Foundation", desc: "Transform your civils journey by joining our GS Foundation Course ", price: "Rs. 80,000 /-", img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1471&auto=format&fit=crop" },
+    { title: "1 Year General Studies Foundation Course", category: "GS Foundation", desc: "Join our GS Foundation Course now and start preparing to your career from now in SRI RAM ias to get better Future.", price: "Rs. 50,000 /-", img: "/assets/course_ias.png" },
+    { title: "2 Year General Studies Foundation Course", category: "GS Foundation", desc: "Transform your civils journey by joining our GS Foundation Course ", price: "Rs. 80,000 /-", img: "/assets/course_ias.png" },
     { title: "Target UPSC 2026 Batch", category: "GS Foundation", desc: "Join our GS Foundation Course now and start preparing to your career", price: "Rs. 45,000 /-", img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1470&auto=format&fit=crop" },
     { title: "Mentorship Program 2025", category: "Mentorship", desc: "Get one-on-one guidance from expert mentors to clear all your doubts and stay on track with your preparation.", price: "Rs. 20,000 /-", img: "https://images.unsplash.com/photo-1454165833767-0ef98925f44b?q=80&w=1470&auto=format&fit=crop" },
     { title: "Mentorship Program 2026", category: "Mentorship", desc: "Long term mentorship for the next year's attempt.", price: "Rs. 30,000 /-", img: "https://images.unsplash.com/photo-1454165833767-0ef98925f44b?q=80&w=1470&auto=format&fit=crop" },

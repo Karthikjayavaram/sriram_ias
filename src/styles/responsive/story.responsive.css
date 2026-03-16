@@ -1,0 +1,242 @@
+/* Story Section Redesign */
+.story-section-new {
+  padding: 5rem 0;
+  background: white;
+}
+
+.story-grid-new {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  /* Make right side slightly wider for the cards */
+  gap: 3rem;
+  align-items: stretch;
+}
+
+/* Left Image */
+.story-img-wrapper-new {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+}
+
+.story-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Removed border radius to match image perfectly */
+}
+
+.story-badge-glass {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  width: calc(100% - 4rem);
+  max-width: 450px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1.5rem 2rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+}
+
+.badge-year {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.badge-text {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Right Content */
+.story-content-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stats-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top-row {
+  flex-wrap: nowrap;
+}
+
+.bottom-row {
+  /* 2 cards */
+  max-width: 66%;
+  /* roughly aligns with the first two cards above */
+}
+
+.stat-card-new {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  perspective: 1000px;
+}
+
+.stat-card-new:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(2deg);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(2, 132, 199, 0.2);
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 42px;
+  /* Stable height */
+}
+
+.icon-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific colored icons like the design */
+.pink-bg {
+  background: #fdf4ff;
+  color: #d946ef;
+}
+
+.blue-bg {
+  background: #eff6ff;
+  color: #3b82f6;
+}
+
+.green-bg {
+  background: #f0fdf4;
+  color: #22c55e;
+}
+
+.purple-bg {
+  background: #eef2ff;
+  color: #6366f1;
+}
+
+.olive-bg {
+  background: #fefce8;
+  color: #ca8a04;
+}
+
+.stat-num {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  min-width: 80px;
+  /* Stabilizes width during incrementing */
+  display: inline-block;
+}
+
+/* specific text colors */
+.pink-text {
+  color: #d946ef;
+}
+
+.blue-text {
+  color: #3b82f6;
+}
+
+.green-text {
+  color: #22c55e;
+}
+
+.purple-text {
+  color: #6366f1;
+}
+
+.olive-text {
+  color: #ca8a04;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Text & Quote Area */
+.story-text-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-top: 0.5rem;
+}
+
+.story-paragraph {
+  color: #334155;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.story-quote-block {
+  padding-left: 1.5rem;
+  border-left: 3px solid #38bdf8;
+  color: #1e293b;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .story-grid-new {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .story-img-wrapper-new {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .story-img-wrapper-new {
+    min-height: 400px;
+  }
+
+  .stats-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .bottom-row {
+    max-width: 100%;
+  }
+
+  .stat-card-new {
+    min-width: 140px;
+    flex: 1 1 140px;
+  }
+
+  .stat-num {
+    min-width: 70px;
+  }
+
+  .story-text-container {
+    padding: 1.5rem;
+  }
+}

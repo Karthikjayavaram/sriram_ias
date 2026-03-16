@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  .quotes-slider-track {
+    gap: 2rem;
+  }
+
+  .quote-card {
+    min-width: 300px;
+    padding: 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .quote-featured {
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-card {
+    min-width: 280px;
+  }
+}

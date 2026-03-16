@@ -11,8 +11,8 @@ const FreeCoursesSection = () => {
       titleColor: "#fca5a5",
       text: "Participate in our daily quizzes to test your knowledge, strengthen your understanding of key concepts, and stay consistent with your learning journey.",
       bgClass: "bg-slate-dark",
-      img1: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop",
-      img2: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600&auto=format&fit=crop"
+      img1: "/assets/free_quiz.png",
+      img2: "/assets/free_blog.png"
     },
     {
       id: "current-affairs",
@@ -21,8 +21,8 @@ const FreeCoursesSection = () => {
       titleColor: "#fdba74",
       text: "Engage with our daily current affairs designed to help you stay updated with key national and international events while improving your analytical understanding for competitive exams.",
       bgClass: "bg-emerald",
-      img1: "https://images.unsplash.com/photo-1584697964190-7cb8b8dd71a1?q=80&w=600&auto=format&fit=crop",
-      img2: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
+      img1: "/assets/free_ca.png",
+      img2: "/assets/free_quiz.png"
     },
     {
       id: "mains-question",
@@ -31,8 +31,8 @@ const FreeCoursesSection = () => {
       titleColor: "#fcd34d",
       text: "Solve our Daily Mains Questions to improve your answer-writing skills, build strong arguments, and stay consistent with your UPSC Mains preparation.",
       bgClass: "bg-blue",
-      img1: "https://images.unsplash.com/photo-1454165833767-0ef98925f44b?q=80&w=600&auto=format&fit=crop",
-      img2: "https://images.unsplash.com/photo-1542315147-380daca8bca0?q=80&w=600&auto=format&fit=crop"
+      img1: "/assets/free_mains.png",
+      img2: "/assets/free_ca.png"
     },
     {
       id: "blogs",
@@ -41,8 +41,8 @@ const FreeCoursesSection = () => {
       titleColor: "#93c5fd",
       text: "Explore our blogs for insightful articles, expert opinions, and the latest updates on UPSC preparation to stay informed and motivated throughout your journey.",
       bgClass: "bg-purple",
-      img1: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600&auto=format&fit=crop",
-      img2: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=600&auto=format&fit=crop"
+      img1: "/assets/free_blog.png",
+      img2: "/assets/free_mains.png"
     }
   ];
 
