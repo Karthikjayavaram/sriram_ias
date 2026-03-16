@@ -43,9 +43,12 @@ const ExploreCourses = () => {
           </div>
         </div>
 
-        <div className={`course-grid-3x2 reveal-up delay-200 ${isVisible ? 'reveal-visible' : ''}`}>
+        <div className="course-grid-3x2">
           {displayedCourses.length > 0 ? displayedCourses.map((course, idx) => (
-            <div key={idx} className="course-card-image">
+            <div 
+              key={`${activeTab}-${idx}`} 
+              className={`course-card-image reveal-up delay-${(idx + 1) * 100} ${isVisible ? 'reveal-visible' : ''}`}
+            >
               <div className="course-img-top">
                 <img src={course.img} alt={course.title} className="course-bg-img" />
               </div>

@@ -55,7 +55,7 @@ const FreeCoursesSection = () => {
 
       <div className="free-courses-blocks">
         {courses.map((course, idx) => (
-          <div key={course.id} className={`free-course-block ${course.bgClass} reveal-up ${isVisible ? 'reveal-visible' : ''}`} style={{ transitionDelay: `${idx * 0.1}s` }}>
+          <div key={course.id} className={`free-course-block ${course.bgClass} reveal-up delay-${(idx + 1) * 150} ${isVisible ? 'reveal-visible' : ''}`}>
             <div className="container flex-block-container">
               <div className="block-text-side">
                 <h3 className="block-title">

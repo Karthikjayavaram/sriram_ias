@@ -17,7 +17,7 @@ const BooksSection = () => {
         <h2 className={`books-title reveal-up ${isVisible ? 'reveal-visible' : ''}`}>Buy Our Books</h2>
         <p className={`books-desc reveal-up delay-100 ${isVisible ? 'reveal-visible' : ''}`}>Explore our collection of expertly curated books designed to simplify complex topics and strengthen your exam preparation. Each book is carefully structured with clear explanations, important concepts, and practice questions to help you build a strong foundation and improve your understanding of every subject.</p>
 
-        <div className={`books-carousel-wrapper reveal-up delay-200 ${isVisible ? 'reveal-visible' : ''}`}
+        <div className={`books-carousel-wrapper reveal-blur delay-200 ${isVisible ? 'reveal-visible' : ''}`}
           onMouseEnter={(e) => e.currentTarget.querySelector('.books-track').classList.add('paused')}
           onMouseLeave={(e) => e.currentTarget.querySelector('.books-track').classList.remove('paused')}>
           <div className="books-track">

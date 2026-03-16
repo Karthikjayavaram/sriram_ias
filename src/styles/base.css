@@ -94,7 +94,16 @@ button {
   cursor: pointer;
   border: none;
   font-family: inherit;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(0) scale(0.98);
 }
 
 /* Header Redesign */
@@ -1037,27 +1046,66 @@ button {
   will-change: transform, opacity;
 }
 
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-blur {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+  will-change: filter, opacity, transform;
+}
+
 .reveal-visible {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translate(0, 0) scale(1);
+  filter: blur(0);
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* Pulsing Animation */
+@keyframes soft-pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.03); opacity: 0.95; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pulse {
+  animation: soft-pulse 3s ease-in-out infinite;
 }
 
 /* Staggered Delay Utilities */
-.delay-100 {
-  transition-delay: 0.1s;
-}
-
-.delay-200 {
-  transition-delay: 0.2s;
-}
-
-.delay-300 {
-  transition-delay: 0.3s;
-}
-
-.delay-500 {
-  transition-delay: 0.5s;
-}
+.delay-50 { transition-delay: 0.05s; }
+.delay-100 { transition-delay: 0.1s; }
+.delay-150 { transition-delay: 0.15s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-250 { transition-delay: 0.25s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-350 { transition-delay: 0.35s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-450 { transition-delay: 0.45s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+.delay-700 { transition-delay: 0.7s; }
+.delay-800 { transition-delay: 0.8s; }
+.delay-900 { transition-delay: 0.9s; }
+.delay-1000 { transition-delay: 1s; }
 
 
 /* Access Free Courses Blocks */

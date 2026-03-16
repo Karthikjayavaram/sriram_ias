@@ -25,7 +25,7 @@ const ToppersSection = () => {
         <p className={`toppers-subtitle-visual reveal-up delay-100 ${isVisible ? 'reveal-visible' : ''}`}>Celebrating Our Toppers Success With You</p>
         
         <div
-          className={`toppers-track-wrapper reveal-up delay-200 ${isVisible ? 'reveal-visible' : ''}`}
+          className={`toppers-track-wrapper reveal-blur delay-200 ${isVisible ? 'reveal-visible' : ''}`}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >

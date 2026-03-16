@@ -32,9 +32,9 @@ const StorySection = () => {
           Our <span style={{ color: '#0ea5e9' }}>Story</span>
         </h2>
         <div className="story-grid-new">
-          <div className={`story-img-wrapper-new reveal-left ${isVisible ? 'reveal-visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+          <div className={`story-img-wrapper-new reveal-scale ${isVisible ? 'reveal-visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
             <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1470&auto=format&fit=crop" alt="Our Story Sriram IAS" className="story-main-img" />
-            <div className="story-badge-glass">
+            <div className="story-badge-glass reveal-up delay-300">
               <h4 className="badge-year">Since 1985</h4>
               <p className="badge-text">Serving the nation in civil services like IAS , IPS</p>
             </div>

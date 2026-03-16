@@ -40,13 +40,13 @@ const Header = () => {
           </div>
           <div className="header-bottom">
             <nav className="desktop-nav">
-              <a href="#courses">Courses</a>
-              <a href="#test-series">Test Series</a>
-              <a href="#free-resources">Free Resources</a>
-              <a href="#current-affairs">Current Affairs</a>
-              <a href="#about">About us</a>
-              <a href="#books">Books</a>
-              <a href="#toppers">Our Toppers</a>
+              <a href="#courses" className="reveal-up reveal-visible delay-50">Courses</a>
+              <a href="#test-series" className="reveal-up reveal-visible delay-100">Test Series</a>
+              <a href="#free-resources" className="reveal-up reveal-visible delay-150">Free Resources</a>
+              <a href="#current-affairs" className="reveal-up reveal-visible delay-200">Current Affairs</a>
+              <a href="#about" className="reveal-up reveal-visible delay-250">About us</a>
+              <a href="#books" className="reveal-up reveal-visible delay-300">Books</a>
+              <a href="#toppers" className="reveal-up reveal-visible delay-350">Our Toppers</a>
             </nav>
           </div>
         </div>

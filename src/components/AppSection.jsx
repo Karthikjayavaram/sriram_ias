@@ -25,12 +25,12 @@ const AppSection = () => {
             <span className="qr-label-new">Scan To Get App</span>
           </div>
 
-          <div className={`app-store-btns reveal-up delay-200 ${isVisible ? 'reveal-visible' : ''}`}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/8f/Google_Play_Store_badge_EN.svg" alt="Play Store" className="store-badge" />
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" className="store-badge" />
+          <div className={`app-store-btns reveal-up delay-300 ${isVisible ? 'reveal-visible' : ''}`}>
+             <img src="https://upload.wikimedia.org/wikipedia/commons/7/8f/Google_Play_Store_badge_EN.svg" alt="Play Store" className="store-badge" />
+             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" className="store-badge" />
           </div>
 
-          <div className="app-features-list reveal-up delay-300">
+          <div className={`app-features-list reveal-up delay-400 ${isVisible ? 'reveal-visible' : ''}`}>
             <div className="app-feature-item">
               <span className="feature-dot"></span>
               <p>Live & Recorded Classes</p>
@@ -53,7 +53,7 @@ const AppSection = () => {
             <div className="app-ring app-ring-1"></div>
             <div className="app-ring app-ring-2"></div>
             <div className="app-ring app-ring-3"></div>
-            <div className="phone-mockup-wrapper float-animation">
+            <div className={`phone-mockup-wrapper floating ${isVisible ? 'reveal-visible' : ''}`}>
               <img src="/assets/phone.svg" alt="Sriram IAS App" className="phone-m" />
             </div>
           </div>

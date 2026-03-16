@@ -23,7 +23,7 @@ const QuotesSection = () => {
           <p className="section-subtitle">Fuel your preparation with inspiration from the greats.</p>
         </div>
       </div>
-      <div className={`quotes-slider-container reveal-up delay-200 ${isVisible ? 'reveal-visible' : ''}`}>
+      <div className={`quotes-slider-container reveal-blur delay-200 ${isVisible ? 'reveal-visible' : ''}`}>
         <div className="quotes-slider-track">
           {doubledQuotes.map((quote, idx) => (
             <div key={idx} className={`quote-card ${quote.featured ? 'quote-featured' : ''}`}>
