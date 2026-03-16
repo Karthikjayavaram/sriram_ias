@@ -39,7 +39,7 @@ const AppSection = () => {
             <div className="app-ring app-ring-2"></div>
             <div className="app-ring app-ring-3"></div>
             <div className="phone-mockup-wrapper float-animation">
-              <img src="/src/assets/phone.svg" alt="Sriram IAS App" className="phone-m" />
+              <img src="/assets/phone.svg" alt="Sriram IAS App" className="phone-m" />
             </div>
           </div>
         </div>

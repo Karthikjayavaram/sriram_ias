@@ -6,14 +6,14 @@ const ToppersSection = () => {
   const [sectionRef, isVisible] = useScrollReveal();
 
   const toppers = [
-    { name: "Kotla Darshan", rank: "AIR 08", course: "GS Foundation Course", img: "/src/assets/topper_img.svg" },
-    { name: "Aarav Sharma", rank: "AIR 12", course: "GS Foundation Course", img: "/src/assets/topper_img.svg" },
-    { name: "Vihaan Gupta", rank: "AIR 24", course: "GS Foundation Course", img: "/src/assets/topper_img.svg" },
-    { name: "Advik Singh", rank: "AIR 45", course: "GS Foundation Course", img: "/src/assets/topper_img.svg" },
-    { name: "Reyansh Patel", rank: "AIR 56", course: "GS Foundation Course", img: "/src/assets/topper_img.svg" },
-    { name: "Ayan Kumar", rank: "AIR 78", course: "GS Foundation Course", img: "/src/assets/topper_img.svg" },
-    { name: "Aryan Reddy", rank: "AIR 89", course: "GS Foundation Course", img: "/src/assets/topper_img.svg" },
-    { name: "Kabir Das", rank: "AIR 102", course: "GS Foundation Course", img: "/src/assets/topper_img.svg" },
+    { name: "Kotla Darshan", rank: "AIR 08", course: "GS Foundation Course", img: "/assets/topper_img.svg" },
+    { name: "Aarav Sharma", rank: "AIR 12", course: "GS Foundation Course", img: "/assets/topper_img.svg" },
+    { name: "Vihaan Gupta", rank: "AIR 24", course: "GS Foundation Course", img: "/assets/topper_img.svg" },
+    { name: "Advik Singh", rank: "AIR 45", course: "GS Foundation Course", img: "/assets/topper_img.svg" },
+    { name: "Reyansh Patel", rank: "AIR 56", course: "GS Foundation Course", img: "/assets/topper_img.svg" },
+    { name: "Ayan Kumar", rank: "AIR 78", course: "GS Foundation Course", img: "/assets/topper_img.svg" },
+    { name: "Aryan Reddy", rank: "AIR 89", course: "GS Foundation Course", img: "/assets/topper_img.svg" },
+    { name: "Kabir Das", rank: "AIR 102", course: "GS Foundation Course", img: "/assets/topper_img.svg" },
   ];
 
   const duplicatedToppers = [...toppers, ...toppers];
@@ -32,7 +32,7 @@ const ToppersSection = () => {
               <div key={idx} className="topper-card-new">
                 {/* Stack wrapper: bg SVG + profile image both absolutely placed */}
                 <div className="topper-stack">
-                  <img src="/src/assets/topperCard_background.svg" className="topper-card-bg-svg" alt="Card BG" />
+                  <img src="/assets/topperCard_background.svg" className="topper-card-bg-svg" alt="Card BG" />
                   <img src={topper.img} alt={topper.name} className="topper-profile-centered" />
                 </div>
                 {/* Info below the stack */}
