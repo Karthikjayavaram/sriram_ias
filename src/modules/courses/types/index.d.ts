@@ -1,0 +1,1 @@
+﻿// Courses type definitions
