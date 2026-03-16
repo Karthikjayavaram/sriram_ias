@@ -18,8 +18,8 @@ const QuotesSection = () => {
   return (
     <section ref={sectionRef} className="quotes-section">
       <div className="container">
-        <div className={`section-header-left reveal-up ${isVisible ? 'reveal-visible' : ''}`} style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 className="section-title" style={{ fontSize: '2.8rem', color: '#0ea5e9' }}>Daily Motivational <span style={{ color: '#38bdf8' }}>Quotes</span></h2>
+        <div className={`section-header-left reveal-up ${isVisible ? 'reveal-visible' : ''}`} style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <h2 className="section-title">Daily Motivational <span className="highlight-blue">Quotes</span></h2>
           <p className="section-subtitle">Fuel your preparation with inspiration from the greats.</p>
         </div>
       </div>

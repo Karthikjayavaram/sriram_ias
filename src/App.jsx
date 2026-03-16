@@ -16,14 +16,30 @@ function App() {
     <div className="app-wrapper">
       <Header />
       <Hero />
-      <QuotesSection />
-      <ExploreCourses />
-      <ToppersSection />
-      <FreeCoursesSection />
-      <BooksSection />
-      <StorySection />
-      <AppSection />
-      <YouTubeSection />
+      <div className="bg-tint">
+        <QuotesSection />
+      </div>
+      <div className="bg-white">
+        <ExploreCourses />
+      </div>
+      <div className="bg-tint">
+        <ToppersSection />
+      </div>
+      <div className="bg-white">
+        <FreeCoursesSection />
+      </div>
+      <div className="bg-tint">
+        <BooksSection />
+      </div>
+      <div className="bg-white">
+        <StorySection />
+      </div>
+      <div className="bg-tint">
+        <AppSection />
+      </div>
+      <div className="bg-white">
+        <YouTubeSection />
+      </div>
       <Footer />
     </div>
   );

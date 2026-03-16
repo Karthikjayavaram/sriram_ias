@@ -3,7 +3,6 @@ import useScrollReveal from '../hooks/useScrollReveal';
 
 const YouTubeSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const [sectionRef, isVisible] = useScrollReveal();
 
   const videos = [
@@ -32,89 +31,72 @@ const YouTubeSection = () => {
       bgClass: "bg-blue"
     },
     { 
-      title: "DAILY CURRENT AFFAIRS ANALYSIS", 
-      subtitle: "SRIRAM'S IAS • 3 WEEKS AGO",
-      desc: "560K VIEWS - STAY UPDATED",
+      title: "PRELIMS 2024 EXCLUSIVE STRATEGY SESSION", 
+      subtitle: "SRIRAM'S IAS • 2 WEEKS AGO",
+      desc: "500K VIEWS - RECENT UPLOAD",
       btnText: "WATCH VIDEO",
-      img: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop", 
-      bgClass: "bg-dark"
+      img: "https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?q=80&w=800&auto=format&fit=crop", 
+      bgClass: "promo-slide"
     },
-    { 
-      title: "TOPPER STRATEGY 2025 - HOW TO CRACK UPSC", 
-      subtitle: "SRIRAM'S IAS • 5 MONTHS AGO",
-      desc: "2.1M VIEWS - EXCLUSIVE INTERVIEW",
-      btnText: "WATCH VIDEO",
-      img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop", 
-      bgClass: "bg-purple"
-    }
   ];
 
   const nextSlide = () => setActiveIndex((prev) => (prev + 1) % videos.length);
   const prevSlide = () => setActiveIndex((prev) => (prev - 1 + videos.length) % videos.length);
 
-  useEffect(() => {
-    if (isHovered) return;
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4500);
-    return () => clearInterval(interval);
-  }, [isHovered, videos.length]);
+  const getSlideClass = (i) => {
+    if (i === activeIndex) return 'yt-slide-active';
+    if (i === (activeIndex + 1) % videos.length) return 'yt-slide-next';
+    return 'yt-slide-prev';
+  };
 
   return (
-    <section ref={sectionRef} className="yt-formal-section">
+    <section ref={sectionRef} className="yt-formal-section bg-white">
       <div className="container">
         
         <div className="yt-header-top">
           <h2 className={`yt-heading reveal-up ${isVisible ? 'reveal-visible' : ''}`}>Youtube <span>Videos</span></h2>
-          <p className={`yt-desc reveal-up delay-100 ${isVisible ? 'reveal-visible' : ''}`}>Our Videos Corner offers carefully curated lectures, strategy sessions, and concept-based discussions designed to make learning simple and effective.</p>
+          <p className={`yt-desc reveal-up delay-100 ${isVisible ? 'reveal-visible' : ''}`}>
+            Our Videos Corner offers carefully curated lectures, strategy sessions, and concept-based discussions designed to make learning simple and effective.
+          </p>
         </div>
 
-        <div className={`yt-carousel-layout reveal-up delay-200 ${isVisible ? 'reveal-visible' : ''}`}>
-          <button className="yt-nav-btn prev-btn" onClick={prevSlide}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-
-          <div 
-            className="yt-carousel-viewport"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <div 
-              className="yt-carousel-track" 
-              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-            >
-              {videos.map((video, i) => (
-                <div key={i} className={`yt-slide-formal ${video.bgClass}`}>
-                  <div className="yt-promo-content">
-                      <div className="yt-promo-text">
-                          <h3>{video.title}</h3>
-                          <h4>{video.subtitle}</h4>
-                          <p className="promo-desc-highlight">{video.desc}</p>
-                          <p className="promo-desc-sm">Lorem Ipsum is simply dummy text the printing and typesetting industry psum has been.</p>
-                          <button className="btn-enroll">{video.btnText}</button>
-                      </div>
-                      <div className="yt-promo-img">
-                          <img src={video.img} alt="Card Preview" />
-                      </div>
+        <div className={`yt-3d-container reveal-up delay-200 ${isVisible ? 'reveal-visible' : ''}`}>
+          <div className="yt-3d-stage">
+            {videos.map((video, i) => (
+              <div key={i} className={`yt-3d-card ${getSlideClass(i)} ${video.bgClass}`}>
+                <div className="card-content-grid">
+                  <div className="card-text-side">
+                    <h3>{video.title}</h3>
+                    <h4>{video.subtitle}</h4>
+                    <p className="highlight-tag">{video.desc}</p>
+                    <p className="desc-text-faded">Lorem Ipsum is simply dummy text the printing and typesetting industry psum has been.</p>
+                    <button className="btn-yellow-enroll">{video.btnText}</button>
+                  </div>
+                  <div className="card-media-side">
+                    <div className="man-image-container">
+                       <img src={video.img} alt="Presenter" />
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          <button className="yt-nav-btn next-btn" onClick={nextSlide}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-
-        <div className={`yt-dots reveal-up delay-300 ${isVisible ? 'reveal-visible' : ''}`}>
-          {videos.map((_, i) => (
-            <button 
-              key={i} 
-              className={`yt-dot ${i === activeIndex ? 'active' : ''}`}
-              onClick={() => setActiveIndex(i)}
-            />
-          ))}
+          <div className="carousel-nav-footer">
+             <div className="yt-nav-arrows">
+                <button className="nav-arrow-btn" onClick={prevSlide}>
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <div className="yt-status-dots">
+                   {videos.map((_, i) => (
+                      <span key={i} className={`status-dot ${i === activeIndex ? 'active' : ''}`} onClick={() => setActiveIndex(i)}></span>
+                   ))}
+                </div>
+                <button className="nav-arrow-btn" onClick={nextSlide}>
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+             </div>
+          </div>
         </div>
 
       </div>
