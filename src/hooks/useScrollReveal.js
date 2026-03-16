@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
  * @param {Object} options - IntersectionObserver options
  * @returns {[Object, boolean]} - [ref, isVisible]
  */
-const useScrollReveal = (options = { threshold: 0.1, rootMargin: '0px' }) => {
+const useScrollReveal = (options = { threshold: 0.1, rootMargin: '0px 0px -150px 0px' }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
 

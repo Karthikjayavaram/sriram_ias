@@ -25,8 +25,8 @@ const ExploreCourses = () => {
     <section ref={sectionRef} id="courses" className="explore-courses-new">
       <div className="container">
         <div className={`section-header-left reveal-up ${isVisible ? 'reveal-visible' : ''}`}>
-          <h2 className="section-title-left" style={{ color: '#0ea5e9', fontWeight: 700 }}>Explore Our Courses</h2>
-          <p className="section-subtitle-left">Explore our comprehensive <span style={{ color: '#38bdf8' }}>UPSC courses</span> designed to cover Prelims, Mains, and Interview preparation with structured learning, expert guidance,</p>
+          <h2 className="section-title-left">Explore Our Courses</h2>
+          <p className="section-subtitle-left">Explore our comprehensive <span>UPSC courses</span> designed to cover Prelims, Mains, and Interview preparation with structured learning, expert guidance,</p>
         </div>
 
         <div className={`tabs-container-wrapper reveal-up delay-100 ${isVisible ? 'reveal-visible' : ''}`}>
