@@ -26,23 +26,8 @@ const AppSection = () => {
           </div>
 
           <div className={`app-store-btns reveal-up delay-300 ${isVisible ? 'reveal-visible' : ''}`}>
-             <img src="https://upload.wikimedia.org/wikipedia/commons/7/8f/Google_Play_Store_badge_EN.svg" alt="Play Store" className="store-badge" />
+             <img src="/assets/playstore.svg" alt="Play Store" className="store-badge" />
              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" className="store-badge" />
-          </div>
-
-          <div className={`app-features-list reveal-up delay-400 ${isVisible ? 'reveal-visible' : ''}`}>
-            <div className="app-feature-item">
-              <span className="feature-dot"></span>
-              <p>Live & Recorded Classes</p>
-            </div>
-            <div className="app-feature-item">
-              <span className="feature-dot"></span>
-              <p>Daily UPSC Quizzes</p>
-            </div>
-            <div className="app-feature-item">
-              <span className="feature-dot"></span>
-              <p>Offline Mode Support</p>
-            </div>
           </div>
 
         </div>

@@ -8,8 +8,7 @@ const Header = () => {
       <div className="container header-container">
         <div className="header-left">
           <div className="years-badge">
-            <span className="count">40 +</span>
-            <span className="text">Years</span>
+            <img src="/assets/logos-40-years.jpg.jpeg" alt="40 Years Excellence" className="forty-years-logo" />
           </div>
           <div className="header-divider"></div>
           <div className="logo-img-wrapper">

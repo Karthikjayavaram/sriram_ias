@@ -60,16 +60,16 @@ const YouTubeSection = () => {
           </p>
         </div>
 
-        <div className={`yt-3d-container reveal-up delay-200 ${isVisible ? 'reveal-visible' : ''}`}>
-          <div className="yt-3d-stage">
+        <div className={`yt-slider-container reveal-up delay-200 ${isVisible ? 'reveal-visible' : ''}`}>
+          <div className="yt-slider-wrapper" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
             {videos.map((video, i) => (
-              <div key={i} className={`yt-3d-card ${getSlideClass(i)} ${video.bgClass}`}>
+              <div key={i} className={`yt-slide-item ${video.bgClass}`}>
                 <div className="card-content-grid">
                   <div className="card-text-side">
                     <h3>{video.title}</h3>
                     <h4>{video.subtitle}</h4>
                     <p className="highlight-tag">{video.desc}</p>
-                    <p className="desc-text-faded">Lorem Ipsum is simply dummy text the printing and typesetting industry psum has been.</p>
+                    <p className="desc-text-faded">Access curated lectures, strategy sessions, and expert discussions designed to help you excel in the UPSC examination with confidence and clarity.</p>
                     <button className="btn-yellow-enroll">{video.btnText}</button>
                   </div>
                   <div className="card-media-side">

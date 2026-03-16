@@ -130,19 +130,15 @@ button:active {
 }
 
 .years-badge {
-  text-align: center;
-  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
-.years-badge .count {
-  font-size: 2rem;
-  font-weight: 700;
-  display: block;
-}
-
-.years-badge .text {
-  font-size: 0.9rem;
-  display: block;
+.forty-years-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1);
 }
 
 .header-divider {
@@ -1648,57 +1644,32 @@ button:active {
   line-height: 1.6;
 }
 
-/* YouTube Exact Figma Redesign */
-.yt-3d-container {
+/* YouTube Exact Figma Redesign - Horizontal Slider */
+.yt-slider-container {
   position: relative;
-  padding: 60px 0;
-  max-width: 1300px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
+  padding: 40px 0;
 }
 
-.yt-3d-stage {
-  position: relative;
-  height: 500px;
+.yt-slider-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 2000px;
+  transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  width: 100%;
 }
 
-.yt-3d-card {
-  position: absolute;
-  width: 850px;
-  height: 480px;
-  border-radius: 40px;
-  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+.yt-slide-item {
+  flex: 0 0 100%;
+  width: 100%;
+  border-radius: 30px;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  pointer-events: none;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+  background: white; /* Fallback */
 }
 
-.yt-slide-active {
-  z-index: 20;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateZ(100px) scale(1.05);
-  /* Smoother concave pinch effect */
-  border-radius: 40px;
-  clip-path: ellipse(100% 88% at 50% 50%);
-}
-
-.yt-slide-prev {
-  opacity: 0.85;
-  transform: translateX(-45%) scale(0.7) translateZ(-150px);
-  z-index: 10;
-}
-
-.yt-slide-next {
-  opacity: 0.85;
-  transform: translateX(45%) scale(0.7) translateZ(-150px);
-  z-index: 10;
-}
 
 /* Card Grid Layout */
 .card-content-grid {
