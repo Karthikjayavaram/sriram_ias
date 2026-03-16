@@ -1,46 +1,58 @@
 @media (max-width: 1024px) {
-  .yt-slide-formal {
-    height: 380px;
+  .yt-slide-item {
+    border-radius: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .yt-slide-formal {
-    height: auto;
-    min-height: 400px;
-  }
-  
-  .yt-promo-content {
-    flex-direction: column;
-  }
-  
-  .yt-promo-text {
-    padding: 1.5rem;
-  }
-  
-  .yt-promo-text h3 {
-    font-size: 1.6rem;
-  }
-  
-  .yt-promo-img {
-    height: 180px;
-  }
-  
-  .yt-nav-btn {
-    width: 40px;
-    height: 40px;
+  .card-content-grid {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
   }
 
-  .yt-carousel-layout {
-    gap: 10px;
+  .card-text-side {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-text-side h3 {
+    font-size: 1.6rem;
+  }
+
+  .card-media-side {
+    height: 250px;
+    width: 100%;
+  }
+
+  .man-image-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .man-image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
 @media (max-width: 480px) {
-  .yt-promo-text h3 {
-    font-size: 1.35rem;
+  .yt-slide-item {
+    border-radius: 15px;
   }
-  .yt-promo-text h4 {
-    font-size: 0.95rem;
+
+  .card-text-side h3 {
+    font-size: 1.4rem;
+  }
+
+  .yt-heading {
+    font-size: 1.8rem;
+  }
+
+  .yt-slider-container {
+    padding: 20px 0;
   }
 }

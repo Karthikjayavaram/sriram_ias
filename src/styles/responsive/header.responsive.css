@@ -6,62 +6,56 @@
   .mobile-menu-btn {
     display: block;
     color: white;
-    font-size: 1.5rem;
-    padding: 5px;
+    transition: color 0.3s;
   }
 
-  .mobile-close-btn {
-    display: block;
+  .header.scrolled .mobile-menu-btn {
+    color: #1e293b;
+  }
+
+  .mobile-menu {
+    display: none;
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    color: white;
-    font-size: 1.8rem;
-    padding: 10px;
-    z-index: 1001;
-  }
-
-  .main-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
+    top: 100%;
+    left: 0;
+    width: 100%;
     background: #0f172a;
+    padding: 2rem;
     flex-direction: column;
-    padding: 80px 2rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .mobile-menu.open {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 999;
-    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
   }
 
-  .main-nav.mobile-open {
-    right: 0;
-    left: auto;
-  }
-
-  .main-nav a {
+  .mobile-nav a {
+    color: white;
+    text-decoration: none;
     font-size: 1.1rem;
+    font-weight: 500;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-bottom: 10px;
     width: 100%;
   }
 
-  .logo-img-wrapper {
-    background: white;
-  }
-
   .logo-img {
+    height: 32px;
+  }
+
+  .forty-years-logo {
+    height: 40px;
+  }
+
+  .header-divider {
     height: 35px;
-  }
-
-  .years-badge {
-    padding: 3px 6px;
-  }
-
-  .years-badge .count {
-    font-size: 1rem;
+    margin: 0 10px;
   }
 }
